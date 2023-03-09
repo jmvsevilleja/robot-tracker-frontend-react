@@ -74,8 +74,8 @@ const LoginPage: React.FC = () => {
               />
             </div>
           </div>
-          <div className="flex justify-center text-red-600">{error}</div>
-          <div className="flex justify-center">
+          <div className="flex flex-col items-center">
+            <div className="text-red-600">{error}</div>
             <Button text="Submit" />
           </div>
         </form>

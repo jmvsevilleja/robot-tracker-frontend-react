@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Button from "../components/Button";
-import { login, setAuthToken } from "../api/api";
+import { login } from "../api/auth";
 
 const LoginPage: React.FC = () => {
   const [email, setEmail] = useState("");
@@ -22,8 +22,7 @@ const LoginPage: React.FC = () => {
       .then((token) => {
         console.log("token", token);
         localStorage.setItem("token", token);
-        setAuthToken(token);
-        // TODO: Redirect to the home page
+        window.location.href = "/";
       })
       .catch((error) => {
         console.error(error);
@@ -36,10 +35,10 @@ const LoginPage: React.FC = () => {
       <div className="max-w-md w-full space-y-8">
         <div>
           <h2 className="mt-6 text-center text-3xl font-bold text-gray-900">
-            Sign in to your account
+            Login
           </h2>
         </div>
-        <form className="mt-8 space-y-6" onSubmit={handleLogin}>
+        <form className="mt-8 space-y-6 border p-4 my-4" onSubmit={handleLogin}>
           <input type="hidden" name="remember" defaultValue="true" />
           <div className="rounded-md shadow-sm space-y-4">
             <div>
@@ -75,9 +74,9 @@ const LoginPage: React.FC = () => {
               />
             </div>
           </div>
-          <div className="text-red-600">{error}</div>
-          <div>
-            <Button text="Submit" onClick={() => {}} />
+          <div className="flex justify-center text-red-600">{error}</div>
+          <div className="flex justify-center">
+            <Button text="Submit" />
           </div>
         </form>
       </div>

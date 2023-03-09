@@ -13,14 +13,6 @@ export function login(email: string, password: string): Promise<string> {
     .then((response) => response.data.token);
 }
 
-export function setAuthToken(token: string | null): void {
-  if (token) {
-    axios.defaults.headers.common["Authorization"] = `Bearer ${token}`;
-  } else {
-    delete axios.defaults.headers.common["Authorization"];
-  }
-}
-
 export function getCurrentUser(): any {
   const token = localStorage.getItem("token");
   if (token) {

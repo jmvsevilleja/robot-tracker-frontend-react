@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import LoginPage from "./pages/LoginPage";
-import { getCurrentUser } from "./api/api";
+import { getCurrentUser } from "./api/auth";
 
 function App() {
   const currentUser = getCurrentUser();

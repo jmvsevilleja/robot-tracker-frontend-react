@@ -1,6 +1,8 @@
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import LoginPage from "./pages/LoginPage";
+import RobotListPage from "./pages/RobotListPage";
+import RobotForm from "./pages/RobotForm";
 import { getCurrentUser } from "./api/auth";
 
 function App() {
@@ -14,8 +16,10 @@ function App() {
             <Routes>
               <Route
                 path="*"
-                element={isAuthenticated ? <></> : <LoginPage />}
+                element={isAuthenticated ? <RobotListPage /> : <LoginPage />}
               />
+              <Route path="/robot" element={<RobotForm />} />
+              <Route path="/robot/:id" element={<RobotForm />} />
             </Routes>
           </main>
         </BrowserRouter>

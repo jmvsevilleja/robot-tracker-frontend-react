@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { deleteRobot, getRobots, Robot } from "../api/robots";
+import Button from "../components/Button";
 
 const RobotListPage: React.FC = () => {
   const [robots, setRobots] = useState<Robot[]>([]);
@@ -47,12 +48,11 @@ const RobotListPage: React.FC = () => {
             >
               Edit
             </Link>
-            <button
-              className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded"
+            <Button
+              text="Delete"
+              className="bg-red-500 hover:bg-red-700"
               onClick={() => handleDelete(robot.id)}
-            >
-              Delete
-            </button>
+            />
           </div>
         </div>
       ))}

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { Robot, createRobot, updateRobot, getRobotById } from "../api/robots";
+import Button from "../components/Button";
 
 interface RouteParams extends Record<string, string | undefined> {
   id: string;
@@ -71,12 +72,7 @@ const RobotForm: React.FC = () => {
           onChange={handleInputChange}
           className="border rounded p-2 my-2 w-full"
         />
-        <button
-          type="submit"
-          className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded my-4"
-        >
-          {id ? "Update Robot" : "Add Robot"}
-        </button>
+        <Button text={id ? "Update Robot" : "Add Robot"} />
       </form>
     </div>
   );

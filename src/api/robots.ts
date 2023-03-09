@@ -14,29 +14,32 @@ const config = {
 };
 
 export const getRobots = async (): Promise<Robot[]> => {
-  console.log("axios.defaults.headers.common", axios.defaults.headers.common);
   const response = await axios.get<Robot[]>(ROBOTS_API_BASE_URL, config);
   return response.data;
 };
 
 export const getRobotById = async (id: string): Promise<Robot> => {
-  const response = await axios.get<Robot>(`${ROBOTS_API_BASE_URL}/${id}`);
+  const response = await axios.get<Robot>(
+    `${ROBOTS_API_BASE_URL}/${id}`,
+    config
+  );
   return response.data;
 };
 
 export const createRobot = async (robot: Robot): Promise<Robot> => {
-  const response = await axios.post<Robot>(ROBOTS_API_BASE_URL, robot);
+  const response = await axios.post<Robot>(ROBOTS_API_BASE_URL, robot, config);
   return response.data;
 };
 
 export const updateRobot = async (robot: Robot): Promise<Robot> => {
   const response = await axios.put<Robot>(
     `${ROBOTS_API_BASE_URL}/${robot.id}`,
-    robot
+    robot,
+    config
   );
   return response.data;
 };
 
 export const deleteRobot = async (id: string): Promise<void> => {
-  await axios.delete(`${ROBOTS_API_BASE_URL}/${id}`);
+  await axios.delete(`${ROBOTS_API_BASE_URL}/${id}`, config);
 };

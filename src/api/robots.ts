@@ -6,6 +6,7 @@ export interface Robot {
   id?: string;
   name: string;
   purpose: string;
+  avatarUrl?: string;
 }
 
 const token = localStorage.getItem("token");

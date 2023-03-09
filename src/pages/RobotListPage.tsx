@@ -37,6 +37,11 @@ const RobotListPage: React.FC = () => {
           key={robot.id}
           className="flex items-center justify-between w-96 border p-4 my-2"
         >
+          <img
+            src={robot.avatarUrl}
+            alt="Robot Avatar"
+            className="w-12 h-12 rounded-full mr-4"
+          />
           <div>
             <h2 className="font-bold text-lg">{robot.name}</h2>
             <p className="text-gray-500">{robot.purpose}</p>

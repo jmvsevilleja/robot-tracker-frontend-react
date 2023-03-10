@@ -23,7 +23,7 @@ This project is a simple web application to list and track robots. It allows use
 ## Project Structure
 
 ```
-├── node_modules/            # Node.js modules
+├── node_modules/            # React modules
 ├── src/                     # Source code
 │   ├── api/                 # Handlers for different API endpoints
 │   ├── components/          # Reusable Components
@@ -33,7 +33,8 @@ This project is a simple web application to list and track robots. It allows use
 │   └── index.ts             # Entry point of the app
 ├── .gitignore
 ├── package.json
-├── tsconfig.json            # TypeScript configuration
+├── tailwind.config.js       # Tailwind configurations
+├── tsconfig.json            # TypeScript configurations
 └── yarn.lock`
 ```
 

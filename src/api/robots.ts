@@ -1,6 +1,8 @@
 import axios from "axios";
 
-const ROBOTS_API_BASE_URL = "http://localhost:4000/robots";
+const API_BASE_URL =
+  process.env.REACT_APP_API_BASE_URL || "http://localhost:4001";
+const ROBOTS_API_BASE_URL = API_BASE_URL + "/robots";
 
 export interface Robot {
   id?: string;

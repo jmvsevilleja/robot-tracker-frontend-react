@@ -17,7 +17,10 @@ This project is a simple web application to list and track robots. It allows use
 2.  Install the dependencies:
     `cd robot-tracker-frontend-react`
     `yarn install`
-3.  Start the development server:
+3.  Set up the environment variables:
+    Update the `.env` file with your API base URL.
+
+4.  Start the development server:
     `yarn start`
 
 ## Project Structure

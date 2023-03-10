@@ -51,6 +51,13 @@ const RobotForm: React.FC = () => {
         onSubmit={handleSubmit}
         className="flex flex-col items-center w-96 border p-4 my-4"
       >
+        {id && (
+          <img
+            src={formState.avatarUrl}
+            alt="Robot Avatar"
+            className="w-16 h-16 rounded-full m-4"
+          />
+        )}
         <label htmlFor="name" className="font-bold">
           Name:
         </label>

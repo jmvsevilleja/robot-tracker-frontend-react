@@ -20,8 +20,14 @@ function App() {
                 path="*"
                 element={isAuthenticated ? <RobotListPage /> : <LoginPage />}
               />
-              <Route path="/robot" element={<RobotForm />} />
-              <Route path="/robot/:id" element={<RobotForm />} />
+              <Route
+                path="/robot"
+                element={isAuthenticated ? <RobotForm /> : <LoginPage />}
+              />
+              <Route
+                path="/robot/:id"
+                element={isAuthenticated ? <RobotForm /> : <LoginPage />}
+              />
             </Routes>
           </main>
         </BrowserRouter>

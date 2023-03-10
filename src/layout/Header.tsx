@@ -1,7 +1,9 @@
 import Button from "../components/Button";
+import { getCurrentUser } from "../api/auth";
 
 export const Header = () => {
-  const isAuthenticated = true;
+  const currentUser = getCurrentUser();
+  const isAuthenticated = Boolean(currentUser);
 
   const handleLogout = () => {
     localStorage.removeItem("token");

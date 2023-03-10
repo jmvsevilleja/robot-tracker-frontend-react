@@ -56,6 +56,9 @@ const LoginPage: React.FC = () => {
                 value={email}
                 onChange={handleEmailChange}
               />
+              <div className="flex flex-col items-center text-sm">
+                john.doe@email.com
+              </div>
             </div>
             <div>
               <label htmlFor="password" className="sr-only">
@@ -72,6 +75,7 @@ const LoginPage: React.FC = () => {
                 value={password}
                 onChange={handlePasswordChange}
               />
+              <div className="flex flex-col items-center text-sm">Pass123</div>
             </div>
           </div>
           <div className="flex flex-col items-center">

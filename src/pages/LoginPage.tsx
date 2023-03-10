@@ -31,7 +31,7 @@ const LoginPage: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-50">
+    <div className="flex items-center justify-center">
       <div className="max-w-md w-full space-y-8">
         <div>
           <h2 className="mt-6 text-center text-3xl font-bold text-gray-900">
@@ -40,7 +40,7 @@ const LoginPage: React.FC = () => {
         </div>
         <form className="mt-8 space-y-6 border p-4 my-4" onSubmit={handleLogin}>
           <input type="hidden" name="remember" defaultValue="true" />
-          <div className="rounded-md shadow-sm space-y-4">
+          <div className="rounded-md space-y-4">
             <div>
               <label htmlFor="email" className="sr-only">
                 Email

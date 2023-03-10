@@ -4,6 +4,7 @@ import LoginPage from "./pages/LoginPage";
 import RobotListPage from "./pages/RobotListPage";
 import RobotForm from "./pages/RobotForm";
 import { getCurrentUser } from "./api/auth";
+import { Header } from "./layout/Header";
 
 function App() {
   const currentUser = getCurrentUser();
@@ -13,6 +14,7 @@ function App() {
       <div>
         <BrowserRouter>
           <main className="">
+            <Header />
             <Routes>
               <Route
                 path="*"
